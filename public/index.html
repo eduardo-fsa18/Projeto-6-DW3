@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda de contatos | Projeto 06</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/agenda.js" defer></script>
+</head>
+<body>
+  <header><div class="container"><h1>Agenda de contatos</h1><p>Projeto 06 · Desenvolvimento Web III</p></div></header>
+  <main class="container">
+    <p id="mensagem" role="status" aria-live="polite" hidden></p>
+    <section id="cadastro" class="painel" hidden>
+      <h2 id="titulo-formulario">Novo contato</h2>
+      <form id="form-contato">
+        <div class="grid">
+          <label class="duplo">Nome<input name="nome" id="nome" autocomplete="name" maxlength="200" required></label>
+          <label>E-mail<input name="email" id="email" type="email" autocomplete="email" maxlength="200" required></label>
+          <label>Telefone com DDD<input name="telefone" id="telefone" type="tel" autocomplete="tel" placeholder="(11) 99999-9999" maxlength="20" required></label>
+          <label>Data de nascimento<input name="data_nascimento" id="data_nascimento" type="date" min="1900-01-01" required></label>
+        </div>
+        <h3>Endereço</h3>
+        <p class="ajuda">Digite o CEP para buscar o endereço no ViaCEP. Informe o número e o complemento.</p>
+        <div class="linha-cep">
+          <label>CEP<input name="cep" id="cep" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" required></label>
+          <button id="buscar-cep" type="button" class="secundario">Buscar CEP</button>
+        </div>
+        <p id="status-cep" class="ajuda" role="status"></p>
+        <div class="grid">
+          <label class="duplo">Rua ou avenida<input name="logradouro" id="logradouro" autocomplete="address-line1" maxlength="200" required></label>
+          <label>Número<input name="numero" id="numero" placeholder="123 ou s/n" maxlength="30" required></label>
+          <label>Complemento (opcional)<input name="complemento" id="complemento" autocomplete="address-line2" maxlength="200"></label>
+          <label>Bairro<input name="bairro" id="bairro" maxlength="200"></label>
+          <label>Cidade<input name="cidade" id="cidade" autocomplete="address-level2" maxlength="200" required></label>
+          <label>UF<select name="estado" id="estado" autocomplete="address-level1" required>
+            <option value="">Selecione</option>
+            <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option>
+          </select></label>
+        </div>
+        <div class="acoes"><button id="salvar" type="submit">Salvar contato</button><button id="cancelar" type="button" class="secundario">Cancelar</button></div>
+      </form>
+    </section>
+    <section class="painel">
+      <div class="barra"><h2>Meus contatos <span id="contador">0</span></h2><button id="novo" type="button">Novo contato</button></div>
+      <label class="pesquisa">Pesquisar por nome, e-mail ou telefone<input id="pesquisa" type="search" placeholder="Digite para pesquisar"></label>
+      <p id="vazio">Nenhum contato cadastrado. Clique em Novo contato para começar.</p>
+      <div class="rolagem"><table id="tabela" hidden><thead><tr><th>Contato</th><th>Telefone</th><th>Nascimento</th><th>Endereço</th><th>Ações</th></tr></thead><tbody id="contatos"></tbody></table></div>
+    </section>
+  </main>
+  <footer class="container">Michael Douglas Dantas da Silva · RA 2171392521034</footer>
+  <dialog id="confirmacao">
+    <h2>Excluir contato</h2><p id="texto-exclusao"></p>
+    <div class="acoes"><button id="confirmar-exclusao" class="perigo">Excluir</button><button id="cancelar-exclusao" class="secundario">Cancelar</button></div>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,13 @@
+✔ API realiza cadastro, consulta, edição e exclusão com todos os campos (177.7156ms)
+✔ Validação rejeita campos inválidos sem inserir registros (94.5208ms)
+✔ Registros inexistentes e rotas incorretas retornam erros adequados (63.6105ms)
+✔ SQLite preserva o contato após fechar e reabrir o banco (55.7197ms)
+✔ SQL parametrizado trata texto de injeção como nome do contato (15.3257ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 715.9076

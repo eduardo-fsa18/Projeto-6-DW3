@@ -1,0 +1,10 @@
+{
+  "name": "projeto06-agenda-michael",
+  "version": "1.0.0",
+  "description": "Agenda de contatos - Projeto 06 de Desenvolvimento Web III",
+  "author": "Michael Douglas Dantas da Silva - RA 2171392521034",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.0.0" },
+  "scripts": { "start": "node app.js", "test": "node --test" }
+}

@@ -1,0 +1,22 @@
+PROJETO 06 - AGENDA DE CONTATOS
+Aluno: Michael Douglas Dantas da Silva
+RA: 2171392521034
+
+Validação em Node.js 24.19.0.
+
+Testes automatizados: 5 aprovados, 0 falhas.
+- Cadastro, consulta, edição e exclusão pela API.
+- Rejeição de e-mail, telefone, CEP, data e UF inválidos.
+- Respostas corretas para contato inexistente e método não permitido.
+- Persistência ao fechar e reabrir o arquivo SQLite.
+- Texto com caracteres de SQL tratado como dado, sem executar comandos.
+
+Verificação pela interface do navegador:
+- Cadastro de contato fictício Ana Teste.
+- CEP 01001000 consultado no ViaCEP: Praça da Sé, Sé, São Paulo/SP.
+- Edição do nome e do número do endereço.
+- Pesquisa com resultado vazio para termo inexistente.
+- Confirmação e exclusão do contato de teste.
+
+O ZIP de entrega não inclui o banco de dados de teste.
+Os prints registram dados fictícios utilizados na demonstração.
